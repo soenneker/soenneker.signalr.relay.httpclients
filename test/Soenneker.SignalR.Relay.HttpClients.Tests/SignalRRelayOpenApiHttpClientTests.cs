@@ -1,16 +1,16 @@
-using Soenneker.Cloudflare.SignalR.HttpClients.Abstract;
+using Soenneker.SignalR.Relay.HttpClients.Abstract;
 using Soenneker.Tests.HostedUnit;
 
-namespace Soenneker.Cloudflare.SignalR.HttpClients.Tests;
+namespace Soenneker.SignalR.Relay.HttpClients.Tests;
 
 [ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
-public sealed class CloudflareSignalROpenApiHttpClientTests : HostedUnitTest
+public sealed class SignalRRelayOpenApiHttpClientTests : HostedUnitTest
 {
-    private readonly ICloudflareSignalROpenApiHttpClient _httpclient;
+    private readonly ISignalRRelayOpenApiHttpClient _httpclient;
 
-    public CloudflareSignalROpenApiHttpClientTests(Host host) : base(host)
+    public SignalRRelayOpenApiHttpClientTests(Host host) : base(host)
     {
-        _httpclient = Resolve<ICloudflareSignalROpenApiHttpClient>(true);
+        _httpclient = Resolve<ISignalRRelayOpenApiHttpClient>(true);
     }
 
     [Test]

@@ -25,7 +25,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Soenneker.Cloudflare.SignalR.HttpClients\Soenneker.Cloudflare.SignalR.HttpClients.csproj" />
+        <ProjectReference Include="..\..\src\Soenneker.SignalR.Relay.HttpClients\Soenneker.SignalR.Relay.HttpClients.csproj" />
     </ItemGroup>
 
 </Project>

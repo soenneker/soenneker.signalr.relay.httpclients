@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Soenneker.Cloudflare.SignalR.HttpClients;
+namespace Soenneker.SignalR.Relay.HttpClients;
 
 /// <summary>Signs management requests after Kiota expands the route parameters.</summary>
 /// <param name="endpoint">Origin authorized to receive requests.</param>

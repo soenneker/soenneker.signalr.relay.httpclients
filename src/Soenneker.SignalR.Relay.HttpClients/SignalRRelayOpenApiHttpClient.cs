@@ -5,18 +5,18 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using Soenneker.Cloudflare.SignalR.HttpClients.Abstract;
+using Soenneker.SignalR.Relay.HttpClients.Abstract;
 
-namespace Soenneker.Cloudflare.SignalR.HttpClients;
+namespace Soenneker.SignalR.Relay.HttpClients;
 
 /// <summary>Owns a pooled HTTP transport for one configured relay origin.</summary>
-public sealed class CloudflareSignalROpenApiHttpClient : ICloudflareSignalROpenApiHttpClient
+public sealed class SignalRRelayOpenApiHttpClient : ISignalRRelayOpenApiHttpClient
 {
     private readonly HttpClient _client;
 
     /// <summary>Reads the relay origin and signing key for this client.</summary>
     /// <param name="configuration">Configuration containing Relay:Endpoint and Relay:AccessKey.</param>
-    public CloudflareSignalROpenApiHttpClient(IConfiguration configuration)
+    public SignalRRelayOpenApiHttpClient(IConfiguration configuration)
     {
         var endpoint = new Uri(configuration["Relay:Endpoint"] ?? throw new InvalidOperationException("Relay:Endpoint is required."));
         if ((endpoint.Scheme != "https" && !(endpoint.Scheme == "http" && endpoint.IsLoopback)) ||
