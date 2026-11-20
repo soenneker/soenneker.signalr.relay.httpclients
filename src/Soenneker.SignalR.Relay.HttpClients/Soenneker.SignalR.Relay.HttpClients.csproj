@@ -15,7 +15,7 @@
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
         <AssemblyName>Soenneker.SignalR.Relay.HttpClients</AssemblyName>
         <PackageId>Soenneker.SignalR.Relay.HttpClients</PackageId>
-        <PackageTags>cloudflare signalr httpclients relay management openapi httpclient singleton cloudflaresignalropenapihttpclient csharp dotnet c# .net</PackageTags>
+        <PackageTags>signalr httpclients relay management openapi httpclient singleton signalrrelayopenapihttpclient csharp dotnet c# .net</PackageTags>
         <Copyright>Copyright Â© 2026 Jake Soenneker</Copyright>
         <Authors>Jake Soenneker</Authors>
         <Company>https://soenneker.com</Company>
